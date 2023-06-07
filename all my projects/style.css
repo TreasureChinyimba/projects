@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgb(37, 0, 139), rgb(24, 0, 9));
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-style: oblique;
+    font-family: Pacifico;
+    text-decoration: underline;
+    font-size: 3em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.575);
+}
+
+html {
+    font-size: 16px;
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vmin;
+} 
+
+.button-option {
+    background: rgba(255, 255, 255, 0.479);
+    height: 35vmin;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    color: rgb(255, 0, 140);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.button-option img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.button-option .button-text {
+    color: rgb(255, 0, 140);
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.button-option:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 25px rgb(154, 255, 129);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+  
+    .container {
+        width: 80vmin;
+        grid-template-columns: 1fr;
+    }
+  
+    .button-option {
+        height: 40vmin;
+        width: 100%;
+        margin-bottom: 2vmin;
+    }
+  
+    .button-option img {
+        height: 70%;
+    }
+  
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+  
+    .container {
+        width: 90vmin;
+    }
+  
+    .button-option {
+        height: 50vmin;
+        margin-bottom: 3vmin;
+    }
+  
+    .button-option img {
+        height: 60%;
+    }
+  
+    h1 {
+        font-size: 2em;
+    }
+}

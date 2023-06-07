@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(43, 42, 42);
+}
+
+.image-slider{
+    min-height: 3em;
+    height: 100vh;
+    position: relative;
+    background-image: url(photos/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+    transition: 0.3s;
+}
+
+.image-slider{
+    box-sizing: border-box;
+}
+
+.caption{
+    background: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 1em 2em 1em;
+    text-align: center;
+}
+
+.caption h1{
+    margin: 0;
+    color: white;
+}
+
+p{
+    color: gray;
+}
+
+.arrow-left,
+.arrow-right{
+    background: white;
+    position: absolute;
+    top: 40%;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.arrow-left:hover,
+.arrow-right:hover{
+    background: black;
+    color: white;
+}
+
+.arrow-left{
+    left: 1em;
+}
+
+.arrow-right{
+    right: 1em;
+}
+
+/* Class for javascript */
+
+.image-fade{
+    animation: imgFade 0.5s ease-in-out
+}
+
+@keyframes imgFade{
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
+}
